@@ -1,45 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.cpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isainz-r <isainz-r@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 18:29:13 by isainz-r          #+#    #+#             */
-/*   Updated: 2024/12/02 18:29:15 by isainz-r         ###   ########.fr       */
+/*   Created: 2024/12/03 14:39:53 by isainz-r          #+#    #+#             */
+/*   Updated: 2024/12/03 14:39:56 by isainz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "phone_book.hpp"
 
-int	PhoneBook:: check_input(std::string input)
+int	main(int argc, char **argv)
 {
+	PhoneBook	phone_book;
+	std::string	input;
 
-	if (input == "ADD")
+	phone_book.patata = 42;
+	std::cout << "patata = " << phone_book.patata << std::endl;
+
+	while (1)
 	{
-		if (person[n_contact % 8].add_contact(n_contact) == 1)
+		std::cout << "Enter line: ";
+		std::getline(std::cin, input);
+		if (input.empty())
+		{
+			std::cout << "\nEmpty" << input <<std::endl;
+			break ;
+		}
+		std::cout << "Entered: " << input <<std::endl;
+		if (phone_book.check_input(input) == 1)
 			return (1);
-		this->n_contact++;
 	}
-	else if (input == "SEARCH")
-	{
-		person[n_contact % 8]
-	}
+	phone_book.patating();
 	return (0);
-}
-
-PhoneBook::PhoneBook(void)
-{
-	this->n_contact = 0;
-	std::cout << "PhoneBook Constructor" <<std::endl;
-}
-
-PhoneBook::~PhoneBook(void)
-{
-	std::cout << "PhoneBook Destructor" <<std::endl;
-}
-
-void	PhoneBook::patating(void)
-{
-	std::cout << "Patating" <<std::endl;
 }
