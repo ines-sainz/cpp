@@ -8,21 +8,42 @@ int	Contact:: check_phone(const char *number)
 	return (0);
 }
 
-void Contact:: print_col(std::string str)
+void Contact:: print_col(std::string str,  int len_str)
 {
+	int spaces;
+	int j = 0;
+	int i = 0;
 
-}
-
-void Contact:: print_contact(void)
-{
-	
-	for (size_t i = 0; i < 10; i++)
+	spaces = 10 - len_str;
+	while (i < spaces)
 	{
-		/* code */
+		std::cout << " ";
+		i++;
 	}
-	
-	
-	std::cout << "Contact Constructor" <<std::endl;
+	while (j < 9 && j < len_str)
+	{
+		std::cout << str[j++];
+	}
+	if (len_str > 10)
+		std::cout << ".";
+}
+/*0123456789
+ines
+mariposa roja
+increible*/
+void Contact:: print_contact(int i)
+{
+	std::stringstream index;
+
+	index << i;
+	print_col(index.str(), 1);
+	std::cout << "|";
+	print_col(this->first_name, first_name.length());
+	std::cout << "|";
+	print_col(this->last_name, last_name.length());
+	std::cout << "|";
+	print_col(this->nickname, nickname.length());
+	std::cout << "\n";
 }
 
 int	Contact:: add_contact(int n_contact)

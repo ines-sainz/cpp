@@ -20,10 +20,15 @@ int	PhoneBook:: check_input(std::string input)
 		if (person[n_contact % 8].add_contact(n_contact) == 1)
 			return (1);
 		this->n_contact++;
+		std::cout << "N_CONTAC: " <<n_contact <<std::endl;
 	}
 	else if (input == "SEARCH")
 	{
-		person[n_contact % 8]
+		for (size_t i = 0; i < 8; i++)
+		{
+			person[(i) % 8].print_contact(i);
+		}
+		
 	}
 	return (0);
 }
