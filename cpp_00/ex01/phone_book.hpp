@@ -30,9 +30,10 @@ class Contact
 	public:
 		Contact(void);
 		~Contact(void);
-		int	add_contact(int n_contact);
+		int	add_contact(int *n_contact);
 		int	check_phone(const char *number);
 		void print_contact(int i);
+		void print_all_contact(void);
 		void print_col(std::string str, int len_str);
 		void set_info(std::string first_name, std::string last_name, std::string nickname, long phone_number, std::string dark_secret);
 };
@@ -43,15 +44,12 @@ class PhoneBook
 		Contact	person[8];
 
 	public:
-
-		int patata;
 		int n_contact;
 	
 		PhoneBook(void);
 		~PhoneBook(void);
 
 		int	check_input(std::string input);
-		void	patating(void);
 };
 
 
