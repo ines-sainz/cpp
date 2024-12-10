@@ -43,10 +43,10 @@ Cluster:: ~Cluster(void)
 void Cluster::printCluster(void)
 {
 	std::cout << "size = " << this->size << "\n";
-	std::cout << " = " << this->seat[1] << "\n";
+	/*std::cout << " = " << this->seat[1] << "\n";
 	std::cout << " = " << this->seat[2] << "\n";
 	std::cout << " = " << this->seat[3] << "\n";
 	std::cout << " = " << this->seat[4] << "\n";
-	std::cout << " = " << this->seat[5] << "\n";
+	std::cout << " = " << this->seat[5] << "\n";*/
 
 }
