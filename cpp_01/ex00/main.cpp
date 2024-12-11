@@ -11,11 +11,14 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
+#include "unistd.h"
 int	main(void)
 {
-	Zombie zombie_1;
-
+	Zombie	*zombie_1;
 	
-	zombie_1.announce();
+	zombie_1 = newZombie("Zombie_1");
+	zombie_1->announce();
+	delete (zombie_1);
+	std::cout  << "\n";
+	randomChump("zombie_3");
 }

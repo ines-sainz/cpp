@@ -16,7 +16,7 @@ CC = c++
 
 CFLAGS = -Wall -Werror -Wextra #-std=c++98
 
-SRCS = main.cpp new_Zombie.cpp randomChump.cpp Zombie.cpp
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

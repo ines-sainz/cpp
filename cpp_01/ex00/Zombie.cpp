@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
+#include "unistd.h"
 void Zombie:: announce( void )
 {
 	std::cout << name <<": BraiiiiiiinnnzzzZ..." <<std::endl;
 }
 
-Zombie::Zombie( void )
+Zombie::Zombie( std::string name )
 {
-	name = "";
+	this->name = name;
 	std::cout << "Zombie Constructor" <<std::endl;
 }
 
 Zombie::~Zombie( void )
 {
-	std::cout << name << "Zombie Destructor" <<std::endl;
+	std::cout << name << " Zombie Destructor" <<std::endl;
 }

@@ -14,6 +14,9 @@
 # define ZOMBIE_H
 
 # include <iostream>
+# include <string.h>
+# include <ctype.h>
+# include <sstream>
 
 class Zombie
 {
@@ -21,10 +24,12 @@ class Zombie
 		std::string	name;
 
 	public:
-		Zombie(void);
-		~Zombie(void);
+		Zombie( std::string name );
+		~Zombie( void );
 		void announce( void );
-		Zombie* newZombie( std::string name );
 };
+
+Zombie*	newZombie( std::string name );
+void	randomChump( std::string name );
 
 #endif
