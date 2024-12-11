@@ -35,7 +35,9 @@ class Contact
 		void print_contact(int i);
 		void print_all_contact(void);
 		void print_col(std::string str, int len_str);
-		void set_info(std::string first_name, std::string last_name, std::string nickname, long phone_number, std::string dark_secret);
+		void set_info(std::string first_name, std::string last_name,
+			std::string nickname, long phone_number,
+			std::string dark_secret);
 };
 
 class PhoneBook
