@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include "unistd.h"
+
 void Zombie:: announce( void )
 {
 	std::cout << name <<": BraiiiiiiinnnzzzZ..." <<std::endl;

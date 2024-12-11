@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include "unistd.h"
+
 int	main(void)
 {
 	Zombie	*zombie_1;
