@@ -13,6 +13,11 @@
 #include "HumanB.hpp"
 #include "Weapon.hpp"
 
+/*pongo referencia porque así puedo cambiar en el main lo que
+tiene club y así no se me imprime lo que había antes sino que
+se está imprimiendo lo que he modificado ya que lo que estoy
+modificando es club a través de la referrencia que estoy
+recibiendo*/
 void HumanB::setWeapon( Weapon& weapon )
 {
 	this->weapon = &weapon;
