@@ -10,4 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
+void HumanB::setWeapon( Weapon& weapon )
+{
+	this->weapon = &weapon;
+}
+
+void HumanB:: attack( void )
+{
+	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+}
+
+HumanB::HumanB( std::string name )
+{
+	this->name = name;
+	this->weapon = NULL;
+	std::cout << "HumanB Constructor" << std::endl;
+}
+
+HumanB::~HumanB( void )
+{
+	std::cout << "HumanB Destructor" << std::endl;
+}

@@ -10,25 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#pragma once
+
+# include <iostream>
 
 class Weapon
 {
-private:
-	std::string type;
-public:
-	Weapon( void );
-	~Weapon( void );
-	std::string& getType(void) const;
-	void setType(std::string type);
+	private:
+		std::string type;
+	public:
+		Weapon( std::string type );
+		~Weapon( void );
+		const std::string& getType(void);
+		void setType(std::string type);
 };
-
-Weapon::Weapon( void )
-{
-	std::cout << "Weapon ";
-}
-
-Weapon::~Weapon( void )
-{
-}
-
