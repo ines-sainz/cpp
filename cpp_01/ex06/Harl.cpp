@@ -49,14 +49,20 @@ void Harl::complainFilter( std::string level)
 		if (level == options[i])
 			filter = i;
 	}
-	if (filter == -1)
+	switch (filter)
 	{
-		std::cout << "Not a valid filter" << std::endl;
-		return ;
-	}
-	for (size_t i = 0; i <= filter; i++)
-	{
-		(this->*levels[i])();
+		case 0:
+			(this->*levels[0])();
+		case 1:
+			(this->*levels[1])();
+		case 2:
+			(this->*levels[2])();
+		case 3:
+			(this->*levels[3])();
+			break ;
+		default:
+			std::cout << "Not a valid filter" << std::endl;
+			break ;
 	}
 	
 }
