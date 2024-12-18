@@ -16,7 +16,7 @@
 /*pongo referencia porque así puedo cambiar en el main lo que
 tiene club y así no se me imprime lo que había antes sino que
 se está imprimiendo lo que he modificado ya que lo que estoy
-modificando es club a través de la referrencia que estoy
+modificando es club a través de la referencia que estoy
 recibiendo*/
 void HumanB::setWeapon( Weapon& weapon )
 {
@@ -25,6 +25,11 @@ void HumanB::setWeapon( Weapon& weapon )
 
 void HumanB:: attack( void )
 {
+	if (this->weapon == NULL)
+	{
+		std::cout << this->name << " does not have a weapon" << std::endl;
+		return ;
+	}
 	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }
 
