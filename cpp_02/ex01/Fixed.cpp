@@ -16,7 +16,7 @@ float	Fixed::toFloat( void ) const
 {
 	float num;
 	/*good*/num = ((float)this->fixedPointNumValue / (1 << Fixed::NumOfFractionalBits));
-	/*bad*/num = static_cast<float>(roundf(this->fixedPointNumValue / (1 << Fixed::NumOfFractionalBits)));
+	/*bad num = static_cast<float>(roundf(this->fixedPointNumValue / (1 << Fixed::NumOfFractionalBits)));*/
 	return (num);
 }
 int	Fixed::toInt( void ) const
@@ -53,7 +53,7 @@ void Fixed::setRawBits( int const raw )
 Fixed& Fixed:: operator=(const Fixed& before)
 {
 	std::cout << "Copy assigment operator called" << std::endl;
-	this->fixedPointNumValue = before.getRawBits();
+	this->fixedPointNumValue = before.fixedPointNumValue;
 	return (*this);
 }
 
@@ -61,7 +61,7 @@ Fixed::Fixed(const Fixed& before)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	//*this = before;
-	this->fixedPointNumValue = before.getRawBits();
+	this->fixedPointNumValue = before.fixedPointNumValue;
 	/*esta línea se puede poner en vez de la anterior para
 	no llamar a el copy assigment operator. Hacen lo mismo*/
 }
