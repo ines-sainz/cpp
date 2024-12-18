@@ -47,7 +47,10 @@ void Harl::complainFilter( std::string level)
 	for (size_t i = 0; i < 4; i++)
 	{
 		if (level == options[i])
+		{
+			std::cout << "[" << options[i] << "]" << std::endl;
 			filter = i;
+		}
 	}
 	switch (filter)
 	{
