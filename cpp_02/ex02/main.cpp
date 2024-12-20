@@ -28,5 +28,27 @@ int main( void )
 
 	std::cout << Fixed::max( a, b ) << std::endl;
 
+	/*Fixed	num1(6);
+	Fixed	num2(2);
+	int i = 1;
+
+	std::cout << "multiplication" << num1.operator*(num2) << std::endl;
+	std::cout << "division" << num1.operator/(num2) << std::endl;
+	std::cout << "sum" << num1.operator+(num2) << std::endl;
+	std::cout << "resta" << num1.operator-(num2) << std::endl;
+	std::cout << "mayor que" << num1.operator>(num2) << std::endl;
+	std::cout << "menor que" << num1.operator<(num2) << std::endl;
+	std::cout << "mayor o igual" << num1.operator>=(num2) << std::endl;
+	std::cout << "menor o igual" << num1.operator<=(num2) << std::endl;
+	std::cout << "igual igual" << num1.operator==(num2) << std::endl;
+	std::cout << "distinto de" << num1.operator!=(num2) << std::endl;
+	std::cout << "++a" << num1.operator++() << std::endl;
+	std::cout << "a++" << num1.operator++(i) << std::endl;
+	std::cout << "--a" << num1.operator--() << std::endl;
+	std::cout << "a--" << num1.operator--(i) << std::endl;
+	std::cout << "max" << num1.max(num1, num2) << std::endl;
+	std::cout << "min" << num1.min(num1, num2) << std::endl;
+	*/
+
 	return 0;
 }
