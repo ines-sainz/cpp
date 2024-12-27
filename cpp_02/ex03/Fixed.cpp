@@ -46,10 +46,6 @@ Fixed&	Fixed::operator++(void)
 	return (*this);
 }
 
-/*el int es la forma que tiene c++ de saber diferenciar un ++i y un i++
-la forma i++ es la postDecrement ya que se aumenta uno después de hacer
-lo que tengas que hacer. si hay un int es que es la de i++, al int no se
-le da valor porque no vamos a hacer nada con eso.*/
 Fixed	Fixed::operator++(int)
 {
 	Fixed	tempPostDecrement = (*this);
@@ -151,19 +147,19 @@ int	Fixed::toInt( void ) const
 
 Fixed::Fixed(const float floatNum)
 {
-	std::cout << "Float constructor called" << std::endl;
+//	std::cout << "Float constructor called" << std::endl;
 	this->fixedPointNumValue = static_cast<int>(roundf(floatNum * (1 << Fixed::NumOfFractionalBits)));
 }
 
 Fixed::Fixed(const int integer)
 {
-	std::cout << "Int constructor called" << std::endl;
+//	std::cout << "Int constructor called" << std::endl;
 	this->fixedPointNumValue = integer << this->NumOfFractionalBits;
 }
 
 int Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+//	std::cout << "getRawBits member function called" << std::endl;
 	return (this->fixedPointNumValue);
 }
 
@@ -174,14 +170,14 @@ void Fixed::setRawBits( int const raw )
 
 Fixed& Fixed:: operator=(const Fixed& before)
 {
-	std::cout << "Copy assigment operator called" << std::endl;
+//	std::cout << "Copy assigment operator called" << std::endl;
 	this->fixedPointNumValue = before.getRawBits();
 	return (*this);
 }
 
 Fixed::Fixed(const Fixed& before)
 {
-	std::cout << "Copy constructor called" << std::endl;
+//	std::cout << "Copy constructor called" << std::endl;
 	this->fixedPointNumValue = before.fixedPointNumValue;
 }
 
@@ -189,12 +185,12 @@ Fixed::Fixed(const Fixed& before)
 Fixed::Fixed( void )
 {
 	fixedPointNumValue = 0;
-	std::cout << "Default constructor called" << std::endl;
+//	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+//	std::cout << "Destructor called" << std::endl;
 }
 
 std::ostream& operator<<(std::ostream &out, Fixed const &classToPrint)
