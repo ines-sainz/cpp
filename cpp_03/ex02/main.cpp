@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isainz-r <isainz-r@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 17:25:48 by isainz-r          #+#    #+#             */
-/*   Updated: 2025/01/08 17:25:52 by isainz-r         ###   ########.fr       */
+/*   Created: 2025/01/08 17:27:00 by isainz-r          #+#    #+#             */
+/*   Updated: 2025/01/08 17:27:04 by isainz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int main()
 {
-	private:
-		/* data */
-	public:
-		void	guardGate();
-		void	attack(const std::string& target);
-		ScavTrap& operator=(const ScavTrap& before);
-		ScavTrap(const ScavTrap& before);
-		ScavTrap( std::string name );
-		ScavTrap( void );
-		~ScavTrap();
-};
+	ClapTrap	person1("Person1");
+	ScavTrap	person2("Person2");
 
+	person1.attack("someone");
+	person1.beRepaired(1);
+	person1.attack("someone");
+	person1.beRepaired(1);
+
+	std::cout << "\n";
+
+	person2.attack("someone");
+	person2.beRepaired(1);
+	person2.attack("someone");
+	person2.beRepaired(1);
+	person2.guardGate();
+}

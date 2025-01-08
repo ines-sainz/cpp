@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: isainz-r <isainz-r@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 17:25:48 by isainz-r          #+#    #+#             */
-/*   Updated: 2025/01/08 17:25:52 by isainz-r         ###   ########.fr       */
+/*   Created: 2025/01/08 17:27:30 by isainz-r          #+#    #+#             */
+/*   Updated: 2025/01/08 17:27:33 by isainz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ class ScavTrap : public ClapTrap
 	public:
 		void	guardGate();
 		void	attack(const std::string& target);
-		ScavTrap& operator=(const ScavTrap& before);
-		ScavTrap(const ScavTrap& before);
 		ScavTrap( std::string name );
 		ScavTrap( void );
 		~ScavTrap();

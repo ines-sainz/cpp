@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: isainz-r <isainz-r@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/08 17:25:25 by isainz-r          #+#    #+#              #
-#    Updated: 2025/01/08 17:25:29 by isainz-r         ###   ########.fr        #
+#    Created: 2025/01/08 17:26:51 by isainz-r          #+#    #+#              #
+#    Updated: 2025/01/08 17:26:55 by isainz-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ScavTrap
+NAME = FragTrap
 
 CC = c++
 
