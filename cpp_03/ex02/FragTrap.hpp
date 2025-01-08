@@ -10,4 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#include "ClapTrap.hpp"
 
+class FragTrap : public ClapTrap
+{
+	private:
+		/* data */
+	public:
+		void	highFivesGuys( void );
+		FragTrap( std::string name );
+		FragTrap( void );
+		~FragTrap();
+};
