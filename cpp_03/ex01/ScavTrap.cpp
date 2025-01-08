@@ -23,6 +23,22 @@ void	ScavTrap::guardGate()
 	std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
 }
 
+ScavTrap& ScavTrap:: operator=(const ScavTrap& before)
+{
+	std::cout << "Copy assigment operator called" << std::endl;
+	this->hitPoints = before.hitPoints;
+	this->EnergyPoints = before.EnergyPoints;
+	this->AttackDamage = before.AttackDamage;
+	this->name = before.name;
+	return (*this);
+}
+
+ScavTrap::ScavTrap(const ScavTrap& before)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = before;
+}
+
 ScavTrap::ScavTrap( void )
 {
 	std::cout << "Default ScavTrap Constructor" << std::endl;
