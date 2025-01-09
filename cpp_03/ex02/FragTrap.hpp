@@ -20,6 +20,8 @@ class FragTrap : public ClapTrap
 	public:
 		void	highFivesGuys( void );
 		FragTrap( std::string name );
+		FragTrap& operator=(const FragTrap& before);
+		FragTrap(const FragTrap& before);
 		FragTrap( void );
 		~FragTrap();
 };
