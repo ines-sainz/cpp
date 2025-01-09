@@ -46,8 +46,8 @@ ScavTrap::ScavTrap( void )
 
 ScavTrap::ScavTrap( std::string name )
 {
-	std::cout << "ScavTrap " << this->name << " Constructor" << std::endl;
 	this->name = name;
+	std::cout << "ScavTrap " << this->name << " Constructor" << std::endl;
 	this->hitPoints = 100;
 	this->EnergyPoints = 50;
 	this->AttackDamage = 20;
