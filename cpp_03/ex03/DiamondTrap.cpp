@@ -55,4 +55,3 @@ DiamondTrap::~DiamondTrap()
 {
 	std::cout << "Default DiamondTrap Destructor" << std::endl;
 }
-

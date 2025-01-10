@@ -86,12 +86,18 @@ ClapTrap::ClapTrap(const ClapTrap& before)
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
+	this->hitPoints = 10;
+	this->EnergyPoints = 10;
+	this->AttackDamage = 0;
 	std::cout << "ClapTrap " << this->name << " Constructor" << std::endl;
 }
 
 ClapTrap::ClapTrap(void)
 {
 	name = "";
+	this->hitPoints = 10;
+	this->EnergyPoints = 10;
+	this->AttackDamage = 0;
 	std::cout << "Default ClapTrap Constructor" << std::endl;
 }
 
