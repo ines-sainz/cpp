@@ -1,17 +1,16 @@
 #pragma once
 #include "AMateria.hpp"
 
+#include <iostream>
+
 class ICharacter
 {
-    private:
-        std::string name;
-
+    protected:
+        /* data */
     public:
+        virtual ~ICharacter() {}
         virtual std::string const & getName() const = 0;
         virtual void equip(AMateria* m) = 0;
-
-        ICharacter& operator=( const ICharacter& before );
-        ICharacter( const ICharacter& before);
-        ICharacter( void );
-        virtual ~ICharacter() {}
+        virtual void unequip( int idx ) = 0;
+        virtual void use( int idx, ICharacter& target ) = 0;
 };
