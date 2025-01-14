@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isainz-r <isainz-r@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/14 09:21:01 by isainz-r          #+#    #+#             */
+/*   Updated: 2025/01/14 09:21:05 by isainz-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "AMateria.hpp"
 
@@ -5,12 +16,6 @@ void AMateria::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
-}
-
-AMateria* AMateria::clone() const
-{
-	AMateria *materia;
-	return (materia);
 }
 
 std::string const & AMateria::getType() const
